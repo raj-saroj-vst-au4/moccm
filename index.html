@@ -342,30 +342,21 @@
             box-shadow: 0 20px 40px rgba(126, 34, 206, 0.2);
         }
 
-        @media (max-width: 768px) {
-            .flywheel-wrapper {
-                padding: 20px 10px;
-            }
-
+        /* Large screens (1024px - 1279px) */
+        @media (min-width: 1024px) and (max-width: 1279px) {
             .flywheel-container {
-                width: 100%;
-                max-width: 450px;
-                height: 450px;
+                max-width: 600px;
+                height: 600px;
             }
 
             .flywheel-outer-ring {
-                width: 430px;
-                height: 430px;
+                width: 560px;
+                height: 560px;
             }
 
-            .flywheel-wheel {
-                width: 370px;
-                height: 370px;
-            }
-
-            .flywheel-slice {
-                width: 185px;
-                height: 185px;
+            .flywheel-circle-bg {
+                width: 400px;
+                height: 400px;
             }
 
             .flywheel-hub {
@@ -373,41 +364,48 @@
                 height: 140px;
             }
 
-            .flywheel-hub-icon {
-                font-size: 2rem;
+            .flywheel-segment-card {
+                width: 190px;
+                padding: 16px;
             }
 
-            .flywheel-hub-title {
-                font-size: 1rem;
+            .segment-card-1 {
+                transform: translate(-50%, -50%) translateY(-230px);
             }
 
-            .segment-icon-badge {
-                width: 70px;
-                height: 70px;
-                border-width: 4px;
+            .segment-card-2 {
+                transform: translate(-50%, -50%) translateX(230px);
             }
 
-            .segment-icon-badge i {
-                font-size: 1.6rem;
+            .segment-card-3 {
+                transform: translate(-50%, -50%) translateY(230px);
             }
 
-            .badge-number {
-                font-size: 0.75rem;
+            .segment-card-4 {
+                transform: translate(-50%, -50%) translateX(-230px);
+            }
+        }
+
+        /* Medium screens (768px - 1023px) */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .flywheel-wrapper {
+                padding: 20px 10px;
             }
 
             .flywheel-container {
-                height: 580px;
-                max-width: 480px;
+                width: 100%;
+                max-width: 520px;
+                height: 520px;
             }
 
             .flywheel-outer-ring {
-                width: 460px;
-                height: 460px;
+                width: 500px;
+                height: 500px;
             }
 
             .flywheel-circle-bg {
-                width: 340px;
-                height: 340px;
+                width: 360px;
+                height: 360px;
             }
 
             .flywheel-hub {
@@ -416,32 +414,32 @@
             }
 
             .flywheel-hub-icon {
-                font-size: 1.6rem;
+                font-size: 1.8rem;
             }
 
             .flywheel-hub-title {
-                font-size: 0.8rem;
+                font-size: 0.85rem;
             }
 
             .flywheel-segment-card {
-                width: 170px;
-                padding: 14px;
+                width: 160px;
+                padding: 12px;
             }
 
             .segment-card-1 {
-                transform: translate(-50%, -50%) translateY(-210px);
+                transform: translate(-50%, -50%) translateY(-195px);
             }
 
             .segment-card-2 {
-                transform: translate(-50%, -50%) translateX(210px);
+                transform: translate(-50%, -50%) translateX(195px);
             }
 
             .segment-card-3 {
-                transform: translate(-50%, -50%) translateY(210px);
+                transform: translate(-50%, -50%) translateY(195px);
             }
 
             .segment-card-4 {
-                transform: translate(-50%, -50%) translateX(-210px);
+                transform: translate(-50%, -50%) translateX(-195px);
             }
 
             .segment-number {
@@ -466,11 +464,11 @@
             }
 
             .segment-description {
-                font-size: 0.62rem;
+                font-size: 0.6rem;
             }
 
             .flywheel-line {
-                height: 70px;
+                height: 60px;
             }
 
             .line-1 { transform: translate(-50%, -100%) translateY(-60px); }
@@ -481,11 +479,13 @@
             .flow-arrow {
                 font-size: 1.1rem;
             }
+        }
 
-            .arrow-1 { transform: translate(-50%, -50%) translate(-75px, -140px) rotate(45deg); }
-            .arrow-2 { transform: translate(-50%, -50%) translate(140px, -75px) rotate(135deg); }
-            .arrow-3 { transform: translate(-50%, -50%) translate(75px, 140px) rotate(225deg); }
-            .arrow-4 { transform: translate(-50%, -50%) translate(-140px, 75px) rotate(315deg); }
+        /* Small screens - flywheel hidden, mobile cards shown */
+        @media (max-width: 767px) {
+            .flywheel-wrapper {
+                display: none;
+            }
         }
 
         .cta-button {
@@ -496,46 +496,92 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
+
+        /* Responsive Navbar Styles */
+        /* Extra small devices (phones, less than 640px) */
+        @media (max-width: 639px) {
+            nav .nav-link {
+                font-size: 0.875rem;
+            }
+            #mobile-menu a {
+                font-size: 0.9rem;
+                padding: 0.5rem 0.75rem;
+            }
+        }
+
+        /* Small devices (landscape phones, 640px - 767px) */
+        @media (min-width: 640px) and (max-width: 767px) {
+            #mobile-menu .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            #mobile-menu a {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Medium devices (tablets, 768px - 1023px) */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            #mobile-menu .grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            #mobile-menu a {
+                font-size: 0.9rem;
+                text-align: center;
+            }
+        }
+
+        /* Large devices (desktops, 1024px - 1279px) */
+        @media (min-width: 1024px) and (max-width: 1279px) {
+            nav .nav-link {
+                font-size: 0.875rem;
+            }
+        }
+
+        /* Extra large devices (large desktops, 1280px+) */
+        @media (min-width: 1280px) {
+            nav .nav-link {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body class="smooth-scroll bg-gray-50">
     <!-- Navigation -->
     <nav class="fixed w-full top-0 z-50 bg-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+            <div class="flex justify-between items-center h-14 sm:h-16 md:h-[72px] lg:h-20">
                 <div class="flex items-center space-x-0">
-                    <div class="w-24 h-16 rounded-lg flex items-center justify-center">
+                    <div class="w-12 h-10 sm:w-16 sm:h-12 md:w-20 md:h-14 lg:w-24 lg:h-16 rounded-lg flex items-center justify-center">
                         <img src="motilal_images/iitblogodark.png" alt="Motilal Oswal Centre for Capital Markets Logo" class="max-h-full max-w-full object-contain">
                     </div>
-                    <!-- <span class="text-gray-400 text-xl font-light">×</span> -->
-                    <div class="w-40 h-40 rounded-lg flex items-center justify-center">
+                    <div class="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-lg flex items-center justify-center">
                         <img src="motilal_images/MOCCM_Logo.png" alt="Partner Logo" class="max-h-full max-w-full object-contain">
                     </div>
                 </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link text-gray-700 hover:text-primary-700 font-medium">Home</a>
-                    <a href="#about" class="nav-link text-gray-700 hover:text-primary-700 font-medium">About</a>
-                    <a href="#ecosystem" class="nav-link text-gray-700 hover:text-primary-700 font-medium">Ecosystem</a>
-                    <a href="#research" class="nav-link text-gray-700 hover:text-primary-700 font-medium">Research</a>
-                    <a href="#programs" class="nav-link text-gray-700 hover:text-primary-700 font-medium">Programs</a>
-                    <a href="#careers" class="nav-link text-gray-700 hover:text-primary-700 font-medium">Careers</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-primary-700 font-medium">Contact</a>
+                <div class="hidden lg:flex lg:space-x-4 xl:space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-primary-700 font-medium text-sm xl:text-base">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-primary-700 font-medium text-sm xl:text-base">About</a>
+                    <a href="#ecosystem" class="nav-link text-gray-700 hover:text-primary-700 font-medium text-sm xl:text-base">Ecosystem</a>
+                    <a href="#research" class="nav-link text-gray-700 hover:text-primary-700 font-medium text-sm xl:text-base">Research</a>
+                    <a href="#programs" class="nav-link text-gray-700 hover:text-primary-700 font-medium text-sm xl:text-base">Programs</a>
+                    <a href="#careers" class="nav-link text-gray-700 hover:text-primary-700 font-medium text-sm xl:text-base">Careers</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-primary-700 font-medium text-sm xl:text-base">Contact</a>
                 </div>
-                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-700">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-4 py-3 space-y-3">
-                <a href="#home" class="block text-gray-700 hover:text-primary-700 font-medium">Home</a>
-                <a href="#about" class="block text-gray-700 hover:text-primary-700 font-medium">About</a>
-                <a href="#ecosystem" class="block text-gray-700 hover:text-primary-700 font-medium">Ecosystem</a>
-                <a href="#research" class="block text-gray-700 hover:text-primary-700 font-medium">Research</a>
-                <a href="#programs" class="block text-gray-700 hover:text-primary-700 font-medium">Programs</a>
-                <a href="#careers" class="block text-gray-700 hover:text-primary-700 font-medium">Careers</a>
-                <a href="#contact" class="block text-gray-700 hover:text-primary-700 font-medium">Contact</a>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
+            <div class="px-4 py-3 space-y-3 sm:grid sm:grid-cols-2 sm:gap-2 sm:space-y-0 md:grid-cols-4">
+                <a href="#home" class="block text-gray-700 hover:text-primary-700 hover:bg-primary-50 font-medium py-2 px-3 rounded-lg transition">Home</a>
+                <a href="#about" class="block text-gray-700 hover:text-primary-700 hover:bg-primary-50 font-medium py-2 px-3 rounded-lg transition">About</a>
+                <a href="#ecosystem" class="block text-gray-700 hover:text-primary-700 hover:bg-primary-50 font-medium py-2 px-3 rounded-lg transition">Ecosystem</a>
+                <a href="#research" class="block text-gray-700 hover:text-primary-700 hover:bg-primary-50 font-medium py-2 px-3 rounded-lg transition">Research</a>
+                <a href="#programs" class="block text-gray-700 hover:text-primary-700 hover:bg-primary-50 font-medium py-2 px-3 rounded-lg transition">Programs</a>
+                <a href="#careers" class="block text-gray-700 hover:text-primary-700 hover:bg-primary-50 font-medium py-2 px-3 rounded-lg transition">Careers</a>
+                <a href="#contact" class="block text-gray-700 hover:text-primary-700 hover:bg-primary-50 font-medium py-2 px-3 rounded-lg transition">Contact</a>
             </div>
         </div>
     </nav>
@@ -621,7 +667,7 @@
     </section>
 
     <!-- About Section with Flywheel -->
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="py-20 bg-white overflow-x-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="section-animate">
                 <div class="text-center mb-16">
@@ -639,7 +685,7 @@
                 <div class="mb-16">
                     <h3 class="text-3xl font-bold text-center text-primary-800 mb-12">Innovation Engine</h3>
 
-                    <div class="flywheel-wrapper">
+                    <div class="flywheel-wrapper hidden md:block">
                         <div class="flywheel-container">
                             <!-- Rotating outer decorative ring -->
                             <div class="flywheel-outer-ring"></div>
@@ -720,7 +766,7 @@
                     </div>
 
                     <!-- Mobile-friendly description cards (shown only on mobile) -->
-                    <div class="md:hidden space-y-4 mt-8">
+                    <div class="block md:hidden space-y-4 mt-8">
                         <div class="bg-gradient-to-r from-purple-50 to-purple-100 p-5 rounded-xl shadow-md border-l-4 border-purple-500">
                             <div class="flex items-start">
                                 <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-3 flex-shrink-0">1</div>
@@ -794,7 +840,7 @@
 
                 <!-- Advisory Board -->
                 <div class="mb-16">
-                    <h3 class="text-3xl font-bold text-primary-800 mb-8 text-center">Advisory Committee</h3>
+                    <h3 class="text-3xl font-bold text-primary-800 mb-8 text-center">Advisory Board</h3>
                     <div class="grid md:grid-cols-3 gap-6">
                         <div class="advisor-card bg-white rounded-xl shadow-lg overflow-hidden">
                             <div class="h-64 bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
@@ -949,7 +995,7 @@
                             </div>
                             <div class="p-4">
                                 <h4 class="font-bold text-gray-900 mb-1">Prof. K. Suresh Kumar</h4>
-                                <p class="text-sm text-gray-600 mb-2">Department of Mathematics</p>
+                                <p class="text-sm text-gray-600">Department of Mathematics</p>
                                 <p class="text-xs text-gray-500">Risk-sensitive Control, Mathematical Finance</p>
                             </div>
                         </div>
@@ -962,7 +1008,7 @@
                             </div>
                             <div class="p-4">
                                 <h4 class="font-bold text-gray-900 mb-1">Prof. N. Hemachandra</h4>
-                                <p class="text-sm text-gray-600 mb-2">IEOR</p>
+                                <p class="text-sm text-gray-600">IEOR</p>
                                 <p class="text-xs text-gray-500">Machine Learning, Reinforcement Learning</p>
                             </div>
                         </div>
@@ -975,7 +1021,7 @@
                             </div>
                             <div class="p-4">
                                 <h4 class="font-bold text-gray-900 mb-1">Prof. K.S. Mallikarjuna Rao</h4>
-                                <p class="text-sm text-gray-600 mb-2">IEOR</p>
+                                <p class="text-sm text-gray-600">IEOR</p>
                                 <p class="text-xs text-gray-500">Game Theory, Stochastic Control</p>
                             </div>
                         </div>
@@ -988,7 +1034,7 @@
                             </div>
                             <div class="p-4">
                                 <h4 class="font-bold text-gray-900 mb-1">Prof. Piyush Pandey</h4>
-                                <p class="text-sm text-gray-600 mb-2">SOM</p>
+                                <p class="text-sm text-gray-600">SOM</p>
                                 <p class="text-xs text-gray-500">Financial Derivatives, Investment Management</p>
                             </div>
                         </div>
@@ -996,28 +1042,28 @@
                         <div class="advisor-card bg-white rounded-xl shadow-lg overflow-hidden">
                             <div class="h-56 flex items-center justify-center relative overflow-hidden">
                                 <div class="absolute inset-0">
-                                    <img src="https://www.economics.iitb.ac.in/assets/img/fac/Puja_Padhi.jpg" class="w-full h-full object-cover object-top">
+                                    <img src="motilal_images/puja.jpg" class="w-full h-full object-cover object-top">
                                 </div>
                             </div>
                             <div class="p-4">
                                 <h4 class="font-bold text-gray-900 mb-1">Prof. Puja Padhi</h4>
-                                <p class="text-sm text-gray-600 mb-2">Department of Economics</p>
+                                <p class="text-sm text-gray-600">Department of Economics</p>
                                 <p class="text-xs text-gray-500">Financial and Monetary Economics</p>
                             </div>
                         </div>
 
-                        <div class="advisor-card bg-white rounded-xl shadow-lg overflow-hidden">
+                        <!-- <div class="advisor-card bg-white rounded-xl shadow-lg overflow-hidden">
                             <div class="h-56 flex items-center justify-center relative overflow-hidden">
                                 <div class="absolute inset-0">
-                                    <img src="https://www.economics.iitb.ac.in/assets/img/fac/Radeef_Chundakkadan.PNG" class="w-full h-full object-cover object-top">
+                                    <img src="motilal_images/radeef.png" class="w-full h-full object-cover object-top">
                                 </div>
                             </div>
                             <div class="p-4">
                                 <h4 class="font-bold text-gray-900 mb-1">Prof. Radeef Chundakkadan</h4>
-                                <p class="text-sm text-gray-600 mb-2">Department of Economics</p>
+                                <p class="text-sm text-gray-600">Department of Economics</p>
                                 <p class="text-xs text-gray-500">Monetary Policy, Financial Markets</p>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="advisor-card bg-white rounded-xl shadow-lg overflow-hidden">
                             <div class="h-56 flex items-center justify-center relative overflow-hidden">
@@ -1027,7 +1073,7 @@
                             </div>
                             <div class="p-4">
                                 <h4 class="font-bold text-gray-900 mb-1">Prof. Sudeep R. Bapat</h4>
-                                <p class="text-sm text-gray-600 mb-2">SOM</p>
+                                <p class="text-sm text-gray-600">SOM</p>
                                 <p class="text-xs text-gray-500">Time Series, AI/ML in Finance</p>
                             </div>
                         </div>
@@ -1040,7 +1086,7 @@
                             </div>
                             <div class="p-4">
                                 <h4 class="font-bold text-gray-900 mb-1">Prof. Ankur Kulkarni</h4>
-                                <p class="text-sm text-gray-600 mb-2">Systems and Control</p>
+                                <p class="text-sm text-gray-600">Systems and Control</p>
                                 <p class="text-xs text-gray-500">Game Theory, Stochastic Control</p>
                             </div>
                         </div>
@@ -1053,8 +1099,47 @@
                             </div>
                             <div class="p-4">
                                 <h4 class="font-bold text-gray-900 mb-1">Prof. Rohan Chinchwadkar</h4>
-                                <p class="text-sm text-gray-600 mb-2">SOM</p>
+                                <p class="text-sm text-gray-600">SOM</p>
                                 <p class="text-xs text-gray-500">Entrepreneurial Finance, AI in Finance</p>
+                            </div>
+                        </div>
+
+                        <div class="advisor-card bg-white rounded-xl shadow-lg overflow-hidden">
+                            <div class="h-56 flex items-center justify-center relative overflow-hidden">
+                                <div class="absolute inset-0">
+                                    <img src="motilal_images/vabapat.webp" class="w-full h-full object-cover object-top">
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="font-bold text-gray-900 mb-1">Prof. Varadraj Bapat</h4>
+                                <p class="text-sm text-gray-600">Professor of Accounting and Finance</p>
+                                <p class="text-xs text-gray-500">IIT Bombay</p>
+                            </div>
+                        </div>
+
+                        <div class="advisor-card bg-white rounded-xl shadow-lg overflow-hidden">
+                            <div class="h-56 flex items-center justify-center relative overflow-hidden">
+                                <div class="absolute inset-0">
+                                    <img src="motilal_images/asingh.jpg" class="w-full h-full object-cover object-top">
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="font-bold text-gray-900 mb-1">Prof. Ashish Singh</h4>
+                                <p class="text-sm text-gray-600">Associate Professor, Economic Development</p>
+                                <p class="text-xs text-gray-500">IIT Bombay</p>
+                            </div>
+                        </div>
+
+                        <div class="advisor-card bg-white rounded-xl shadow-lg overflow-hidden">
+                            <div class="h-56 flex items-center justify-center relative overflow-hidden">
+                                <div class="absolute inset-0">
+                                    <img src="motilal_images/vbeloskar.jpg" class="w-full h-full object-cover object-top">
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="font-bold text-gray-900 mb-1">Prof. Ved Beloskar</h4>
+                                <p class="text-sm text-gray-600">Assistant Professor of Finance</p>
+                                <p class="text-xs text-gray-500">IIT Bombay</p>
                             </div>
                         </div>
                     </div>
@@ -1507,6 +1592,37 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Certificate Programs -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <button class="w-full program-toggle px-8 py-6 bg-gradient-to-r from-primary-700 to-primary-600 text-white text-left flex justify-between items-center hover:from-primary-600 hover:to-primary-500 transition" data-program="cert">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">Certificate Programs</h3>
+                                <p class="text-purple-200">Click to view details</p>
+                            </div>
+                            <i class="fas fa-chevron-down text-2xl transform transition-transform"></i>
+                        </button>
+                        <div class="program-detail" id="cert-detail">
+                            <div class="p-8">
+                                <p class="text-gray-700 mb-6 leading-relaxed">
+                                    Explore our certificate programs designed to equip professionals and students with specialized skills in financial markets and emerging technologies.
+                                </p>
+                                <ul class="space-y-4" id="cert-programs-list">
+                                    <!-- Add new certificate programs as <li> items below -->
+                                    <li>
+                                        <a href="https://www.jaroeducation.com/certificate-course-in-investment-strategies-and-portfolio-management-in-the-age-of-ai" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 bg-primary-50 rounded-lg hover:bg-primary-100 transition group">
+                                            <div class="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                                <i class="fas fa-certificate text-white"></i>
+                                            </div>
+                                            <span class="text-primary-800 font-semibold group-hover:text-primary-600 transition">Certificate Course in Investment Strategies and Portfolio Management in the Age of AI</span>
+                                            <i class="fas fa-external-link-alt text-primary-400 ml-auto flex-shrink-0"></i>
+                                        </a>
+                                    </li>
+                                    <!-- To add more certificate programs, copy the <li>...</li> block above and update the href and program name -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- The Labs -->
@@ -1822,15 +1938,59 @@
                             </div>
                         </div>
                     </div>
+			
+		    <div class="text-center mt-8">
+                    	<a href="https://www.iitb.ac.in/job-vacancy-ad/rolling-advertisement-no-l-1025-26" target="_blank" class="cta-button inline-block bg-primary-700 text-white px-10 py-4 rounded-lg font-semibold hover:bg-primary-600 transition shadow-lg hover:shadow-xl">
+                        	<i class="fas fa-file-alt mr-2"></i>
+                        	Apply Now for Faculty Positions
+                    	</a>
+                   </div>
                 </div>
 
-                <!-- Other Roles -->
-                <div class="text-center bg-primary-50 rounded-xl p-12">
-                    <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-tools text-2xl text-white"></i>
+                <!-- Staff Positions -->
+                <div class="mt-12">
+                    <h3 class="text-3xl font-bold text-primary-800 mb-8 text-center">Staff Positions</h3>
+
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Marketing, Communications and Events Manager -->
+                        <a href="https://portal.acr.iitbombay.org/job-listing/802155263562776330" target="_blank" class="bg-white rounded-xl shadow-lg overflow-hidden border-l-4 border-accent-500 hover:shadow-xl transition-shadow group">
+                            <div class="p-6">
+                                <div class="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-accent-200 transition">
+                                    <i class="fas fa-bullhorn text-xl text-accent-600"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-primary-900 mb-2">Marketing and Events Manager</h4>
+                                <p class="text-primary-600 font-medium flex items-center">
+                                    Apply Now <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                                </p>
+                            </div>
+                        </a>
+
+                        <!-- Academic Projects Manager -->
+                        <a href="https://portal.acr.iitbombay.org/job-listing/802157412241796661" target="_blank" class="bg-white rounded-xl shadow-lg overflow-hidden border-l-4 border-primary-600 hover:shadow-xl transition-shadow group">
+                            <div class="p-6">
+                                <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary-200 transition">
+                                    <i class="fas fa-project-diagram text-xl text-primary-600"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-primary-900 mb-2">Academic Projects Manager</h4>
+                                <p class="text-primary-600 font-medium flex items-center">
+                                    Apply Now <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                                </p>
+                            </div>
+                        </a>
+
+                        <!-- Project and Operations Assistant -->
+                        <a href="https://portal.acr.iitbombay.org/job-listing/802142214701342455" target="_blank" class="bg-white rounded-xl shadow-lg overflow-hidden border-l-4 border-accent-500 hover:shadow-xl transition-shadow group">
+                            <div class="p-6">
+                                <div class="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-accent-200 transition">
+                                    <i class="fas fa-tasks text-xl text-accent-600"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-primary-900 mb-2">Project and Operations Assistant</h4>
+                                <p class="text-primary-600 font-medium flex items-center">
+                                    Apply Now <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                                </p>
+                            </div>
+                        </a>
                     </div>
-                    <h3 class="text-2xl font-bold text-primary-800 mb-4">Other Roles</h3>
-                    <p class="text-xl text-gray-600">Coming Soon</p>
                 </div>
             </div>
         </div>
@@ -1875,7 +2035,7 @@
                                 <div class="flex items-center bg-white/5 p-3 rounded-lg">
                                     <i class="fas fa-envelope text-accent-500 mr-3"></i>
                                     <a href="mailto:head.som@iitb.ac.in" class="text-sm hover:text-accent-400 transition">
-                                        head.som@iitb.ac.in
+                                        head.som[at]iitb.ac.in
                                     </a>
                                 </div>
                             </div>
@@ -1906,7 +2066,7 @@
                                 <div class="flex items-center bg-white/5 p-3 rounded-lg">
                                     <i class="fas fa-envelope text-accent-500 mr-3"></i>
                                     <a href="mailto:program.director.moccm@iitb.ac.in" class="text-sm hover:text-accent-400 transition">
-                                        program.director.moccm@iitb.ac.in
+                                        program.director.moccm[at]iitb.ac.in
                                     </a>
                                 </div>
                             </div>
